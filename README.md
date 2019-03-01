@@ -1,3 +1,7 @@
+## Joan's notes on top of this repo:   
+:arrow_forward: Start learning about automated testing.
+:arrow_forward: A pattern very similar to this is known as Test Driven Development (TDD).      
+:dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin:    
 # Kata: Objects and Arrays
 
 ## Introduction
