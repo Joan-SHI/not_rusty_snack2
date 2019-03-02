@@ -4,10 +4,12 @@
 
 // getGreeting should return a string containing 'Hello ' and the contents of `name`
 function getGreeting (name) {
+  return 'Hello ' + name
 }
 
 // ageOneYear should add one to the `age` property of `obj`
 function ageOneYear (obj) {
+  return obj.age += 1
 }
 
 // makeObject should return an object that looks like this:
@@ -85,11 +87,13 @@ function insertItemAtIndex (arr, item, idx) {
 // deleteItemAtIndex should remove the element at `idx` (the array
 // should get shorter).
 function deleteItemAtIndex (arr, idx) {
+  return arr.splice(idx, 1)
 }
 
 // deleteItem should return an array with every instance of `item` removed
 function deleteItem (arr, item) {
-}
+   }
+
 
 // zipObject should return an object built from two arrays
 // For example, given ['foo', 'bar'] and [1, 2] it would return
