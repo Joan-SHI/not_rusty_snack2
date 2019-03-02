@@ -31,6 +31,8 @@ function addName (obj, name) {
 // deleteProperty should remove the property contained in `key` from `obj`
 // Tip: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete
 function deleteProperty (obj, key) {
+  delete obj[key]
+  return obj
 }
 
 // returnErrorIfFalsy should return a JavaScript Error object with message:
@@ -92,6 +94,7 @@ function deleteItemAtIndex (arr, idx) {
 
 // deleteItem should return an array with every instance of `item` removed
 function deleteItem (arr, item) {
+  return arr.filter(currentItem => currentItem != item)
    }
 
 
@@ -118,7 +121,15 @@ function findOneByProperty (arr, search) {
 // findAll should return an array containing all objects in `arr` that
 // have the property and value of `search`
 function findAll (arr, search) {
-
+  const newArray = []
+  const prop = Object.keys(search)[0]
+arr.forEach(function(item){
+  const hasKey = Object.keys(item).includes(prop)
+  if(hasKey && item [prop] === search[prop]){
+    newArray.push(item)
+  }
+})
+return newArray
 }
 
 module.exports = {
