@@ -22,6 +22,7 @@ function makeObject (key, value) {
 
 // getValue should return the value of the property contained in `key`
 function getValue (obj, key) {
+  return obj[key]
 }
 
 // addName should add a `name` property to the object with the value of the `name` argument
@@ -75,6 +76,10 @@ function hasItem (arr, item) {
 // getItemAtIndex should return arr[idx] but only if that index exists:
 // if it doesn't, return a JavaScript Error object.
 function getItemAtIndex (arr, idx) {
+  if (arr[idx] != null) {
+    return arr[idx]
+  }
+  else { return new Error() }
 }
 
 // replaceItemAtIndex should replace the element at `idx` with `item`
