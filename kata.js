@@ -115,7 +115,18 @@ function unzipObject (obj) {
 //   [{a: 1}, {b: 2, c: 3}] and {b: 2}
 // it will return:
 //   {b: 2, c: 3}
+
+// Be careful about the difference between var/let/const. https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e
 function findOneByProperty (arr, search) {
+  const prop = Object.keys(search)[0]
+  let seek = null
+  arr.forEach(function(item){
+    const hasKey = Object.keys(item).includes(prop)
+    if (hasKey && item[prop] === search[prop]){
+      seek = item
+    }
+  })
+  return seek 
 }
 
 // findAll should return an array containing all objects in `arr` that

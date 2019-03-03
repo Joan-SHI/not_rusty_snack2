@@ -1,6 +1,7 @@
 ## Joan's notes on top of this repo:   
 :arrow_forward: Automated testing.     
 :arrow_forward: A pattern very similar to this is known as Test Driven Development (TDD).      
+:arrow_forward: Be careful about the difference between var/let/const. https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e        
 :dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin::dolphin:    
 # Kata: Objects and Arrays
 
