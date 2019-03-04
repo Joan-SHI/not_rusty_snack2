@@ -18,6 +18,9 @@ function ageOneYear (obj) {
 //   key: value
 // }
 function makeObject (key, value) {
+  const newObject = {}
+  newObject[key] = value
+  return newObject
 }
 
 // getValue should return the value of the property contained in `key`
@@ -62,12 +65,21 @@ function values (obj) {
 // For example, makeArrayOfItem('foo', 2) would return:
 // ['foo', 'foo']
 function makeArrayOfItem (item, length) {
-  
+  const newArray = []
+  for (let i = 0; i < length; i++) {
+    newArray.push(item)
+  }
+return newArray
 }
 
 // makeArrayOfItems should return an array containing all arguments passed to it
 // Tip: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 function makeArrayOfItems () {
+  const newArray = []
+  for (i = 0; i < arguments.length; i++) {
+    newArray.push(arguments[i])
+  }
+  return newArray
 }
 
 // hasItem should return true if `item` is present in `arr` at least once,
@@ -94,8 +106,14 @@ function getItemAtIndex (arr, idx) {
 
 // replaceItemAtIndex should replace the element at `idx` with `item`
 function replaceItemAtIndex (arr, idx, item) {
-  
-}
+  return arr.splice(idx, 1, item)
+  }
+
+//or
+// function replaceItemAtIndex (arr, idx, item) {
+//   arr[idx] = item
+//   return arr
+// }
 
 // insertItemAtIndex should insert `item` at `idx` without overwriting
 // any array values (the array should get longer)
