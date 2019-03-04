@@ -30,6 +30,7 @@ function getValue (obj, key) {
 
 // addName should add a `name` property to the object with the value of the `name` argument
 function addName (obj, name) {
+  obj.name = name
 }
 
 // deleteProperty should remove the property contained in `key` from `obj`
@@ -44,6 +45,9 @@ function deleteProperty (obj, key) {
 // if val evaluates to false
 // Tip: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 function returnErrorIfFalsy (val) {
+  if (!val) {
+    return new Error('Oh no, an error!')
+  }
 }
 
 // keys should return an array of the object's property names (keys)
@@ -54,7 +58,18 @@ function keys (obj) {
 
 // values should return an array of the object's own values
 // For example, given {foo: 1, bar: 2} it would return [1, 2]
+// function values (obj) {
+//   const arr = []
+//   for (let haha in obj) {
+//     arr.push(obj[haha])
+//   }
+//   return arr
+// }
+//or 
 function values (obj) {
+  return Object.keys(obj).map(function(haha){
+    return obj[haha]
+  })
 }
 
 /**
@@ -137,12 +152,36 @@ function deleteItem (arr, item) {
 // For example, given ['foo', 'bar'] and [1, 2] it would return
 // {foo: 1, bar: 2}
 function zipObject (keys, values) {
+  const obj = {}
+  for (let i =0; i < keys.length; i++){
+    const baby = keys[i]
+    obj[baby] = values[i]
+  }
+  return obj
 }
 
 // unzipObject should return an array of arrays, each one a pair of keys and values
 // For example, given {foo: 1, bar: 2} it would return
 // [['foo', 1], ['bar', 2]]
-function unzipObject (obj) {
+// function unzipObject (obj) {
+//   const newArray = []
+//   const keys = Object.keys(obj)
+//   for (i = 0; i < keys.length; i++){
+//   const key = keys[i]
+//   const item = [key, obj[key]]
+//   newArray.push(item)
+//   }
+//   return newArray
+// }
+
+//or
+function unzipObject(obj){
+  const arr = []
+  for (let haha in obj) {
+    const baby = [haha, obj[haha]]
+    arr.push(baby)
+  }
+  return arr
 }
 
 // findOneByProperty should return an object from `arr` that has the
