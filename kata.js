@@ -46,6 +46,7 @@ function returnErrorIfFalsy (val) {
 // keys should return an array of the object's property names (keys)
 // For example, given {foo: 1, bar: 2} it would return ['foo', 'bar']
 function keys (obj) {
+  return Object.keys(obj)
 }
 
 // values should return an array of the object's own values
@@ -61,6 +62,7 @@ function values (obj) {
 // For example, makeArrayOfItem('foo', 2) would return:
 // ['foo', 'foo']
 function makeArrayOfItem (item, length) {
+  
 }
 
 // makeArrayOfItems should return an array containing all arguments passed to it
@@ -70,7 +72,15 @@ function makeArrayOfItems () {
 
 // hasItem should return true if `item` is present in `arr` at least once,
 // otherwise it should return false.
-function hasItem (arr, item) {
+// function hasItem (arr, item) {
+//   if (arr.includes(item)) {
+//     return true
+//   }
+//   else return false
+// }
+//or
+function hasItem(arr, item) {
+  return arr.includes(item)
 }
 
 // getItemAtIndex should return arr[idx] but only if that index exists:
@@ -84,11 +94,13 @@ function getItemAtIndex (arr, idx) {
 
 // replaceItemAtIndex should replace the element at `idx` with `item`
 function replaceItemAtIndex (arr, idx, item) {
+  
 }
 
 // insertItemAtIndex should insert `item` at `idx` without overwriting
 // any array values (the array should get longer)
 function insertItemAtIndex (arr, item, idx) {
+  return arr.splice (idx, 0, item)
 }
 
 // deleteItemAtIndex should remove the element at `idx` (the array
